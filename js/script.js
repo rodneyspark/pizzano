@@ -95,10 +95,22 @@ quantity.prototype.quantityPrice = function() {
 }
 
 $(document).ready(function() {
-  $("#delivery").click(function() {
-      alert("For to door deliveries. Please confirm by pressing ok to continue");
-      prompt("Please Enter your mobile number");
-      prompt("Enter your current location");
+  $(".location-form").submit(function(event) {
+    event.preventDefault();
+    var number= $ ("#phone").val()
+    var location = $ ("#location").val()
+    // if (number=== "number") {
+        alert("for your door delivery  it will be delivered to" + location +"at a fee of 200")
+        
+    // } else {
+        
+    // }
+    
+
+    //   alert("For to door deliveries. Please confirm by pressing ok to continue");
+    //   prompt("Plehonease Enter your mobile number");
+    //   prompt("Enter your current location");
+
   });
 });
 
@@ -142,7 +154,7 @@ $(document).ready(function() {
  // calcTotal to calculate the total pizza summation
 
   var pizzaPrice = (parseInt(parseInt(pizzaSize.priceSize()) + parseInt(crustSize.crustPrice()) + parseInt(toppingSize.toppingPrice())));
-  $("#summation").append(pizzaPrice);
+  $("#submition").append(pizzaPrice);
 
   // S-size, C-crust, T-toppings N-name
 
